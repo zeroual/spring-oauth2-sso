@@ -1,0 +1,16 @@
+
+security:
+  oauth2:
+      client:
+        clientId: app1
+        clientSecret: app1
+        accessTokenUri: http://localhost:8083/auth/oauth/token
+        userAuthorizationUri: http://localhost:8083/auth/oauth/authorize
+      resource:
+        userInfoUri: http://localhost:8083/auth/user/me
+server:
+  context-path: /app1
+  session:
+    cookie:
+      name: U1SESSIONID
+  port: 8081

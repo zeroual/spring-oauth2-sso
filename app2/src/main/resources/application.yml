@@ -1,0 +1,16 @@
+
+security:
+  oauth2:
+      client:
+        clientId: app2
+        clientSecret: app2
+        accessTokenUri: http://localhost:8083/auth/oauth/token
+        userAuthorizationUri: http://localhost:8083/auth/oauth/authorize
+      resource:
+        userInfoUri: http://localhost:8083/auth/user/me
+server:
+  context-path: /app2
+  session:
+    cookie:
+      name: U2SESSIONID
+  port: 8082
